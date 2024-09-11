@@ -1,18 +1,117 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+body {
+  font-family: 'Montserrat', sans-serif;
+  padding: 24px;
+  color: #2e2f42;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.btn-back {
+  background-color: white;
+  border-radius: 4px;
+  display: inline-flex;
+  padding: 3px 8px;
+  margin-bottom: 24px;
+}
+
+.index-menu {
+  display: grid;
+  gap: 5px;
+}
+
+/* Task 1 */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1128px;
+  gap: 24px;
+  padding-top: 24px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  width: 360px;
+  height: 200px;
+  overflow: hidden;
+  transition: all 250ms ease-in-out;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image {
+  flex-basis: auto;
+}
+
+/* Task 2 */
+.feedback-form {
+  display: grid;
+  justify-content: center;
+}
+
+.feedback-form label {
+  display: grid;
+  gap: 8px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  display: grid;
+  width: 360px;
+  margin-bottom: 8px;
+}
+
+.feedback-form input {
+  width: 100%;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #808080;
+  transition: all 250ms ease-in-out;
+}
+
+.feedback-form textarea {
+  height: 80px;
+  resize: none;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  transition: all 250ms ease-in-out;
+}
+
+.feedback-form textarea:is(:focus-within, :hover),
+.feedback-form input:is(:focus-within, :hover) {
+  border-color: black;
+}
+
+.feedback-form label:nth-child(2) {
+  margin-bottom: 16px;
+}
+
+.feedback-form button {
+  font-weight: 500;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 0;
+  width: 95px;
+  background-color: #4e75ff;
+  border: none;
+  transition: all 250ms ease-in-out;
+}
+
+.feedback-form button:is(:hover, :focus) {
+  background: #6c8cff;
+}

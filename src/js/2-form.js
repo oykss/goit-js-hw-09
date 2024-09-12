@@ -17,9 +17,12 @@ form.addEventListener('input', () => {
 form.addEventListener('submit', event => {
   event.preventDefault();
   if (formData.email && formData.message) {
+    for (const key in formData) {
+      console.log(key, formData[key]);
+      formData[key] = '';
+    }
+
     localStorage.clear();
-    formData.email = '';
-    formData.message = '';
     form.reset();
   } else {
     alert('Fill please all fields');
